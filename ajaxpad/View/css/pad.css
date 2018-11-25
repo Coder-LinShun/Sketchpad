@@ -1,0 +1,103 @@
+
+        *{margin:0;padding:0}
+        body{
+            overflow: hidden;
+            background: url("../img/bg.jpg") no-repeat;
+            text-align: center;
+        }
+        body *{
+            opacity: 0;
+        }
+       
+        #Sketchpad{
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin: 0 auto ;
+            width: 800px;
+            height: 500px;
+            box-shadow:0 0 0 2px  black;
+             background: white;
+        }
+        #Sketchpad div{border-style: solid}
+        li{ list-style: none;  }
+        #box{
+           position: relative;
+           display: flex;
+           width: 800px;
+           height:35px ;
+           border: 2px solid black;
+           border-bottom-style:none;
+           margin: 10px auto 0;
+           cursor: pointer
+        }
+        ul{
+            width:200px;
+            position: absolute;
+            overflow: hidden;
+            height:35px;
+            z-index: 999;
+            background:lightskyblue;
+            font:16px/25px '微软雅黑';
+        }
+        #style{left:0; }
+        #borderW{left: 200px}
+        #borderC{left: 400px}
+        #bgColor{left: 600px}
+        ul li{background:lightskyblue ; }
+        ul li input[type=color]{ margin: 5px auto;  }
+        ul li label{
+            display: block;
+            height: 25px;
+            text-align: center;
+            padding: 5px;
+        }
+        ul li:first-child{
+            border-width:0 2px 0 0;
+            border-color:black;
+            border-style:solid;
+            font:18px/32px '微软雅黑';
+        }
+        label,input{ cursor: pointer}
+        #box ul:last-child li:first-child{  border:none;  }
+        #delete,#clear,#back,#save{
+            width: 80px;
+            margin-left: 15px;
+            padding: 2px 10px ;
+            background: lightskyblue;
+            font:16px/25px '微软雅黑';
+        }
+
+        #save,
+        #back{
+            color: grey;
+        }
+
+        .out{
+            position: fixed;
+            top:20px;
+            right: 10px;
+        }
+        .out p{
+            padding:0 3px 2px;
+            margin:0 20px 20px 0;
+            border: 1px solid black;
+            font:18px/20px '微软雅黑';
+            cursor:pointer
+        }
+        #deleteUser:hover{
+            background: rgb(248, 74, 74);
+
+        }
+        #outUser:hover{
+            background: lightskyblue;
+
+        }
+        
+        #go:hover{
+            background: lightskyblue;
+
+        }
+
+    
+    

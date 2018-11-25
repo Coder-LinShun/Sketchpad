@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en" onselectstart="return false">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <?php echo $_SESSION['username'] ?>的画板
+    </title>
+    <link rel="icon" href="./View/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./View/css/pad.css">
+    <link rel="stylesheet" href="./View/css/reset.css">
+</head>
+<body>
+    <form action="index.php?c=user&a=save" method="POST">
+        <input id="dataValue" type="hidden" name='data' value="">
+        <input  type="hidden" name='updata' value="updata">
+    </form>
+    <div id="box">
+        <ul id="style">
+            <li>形状</li>
+            <li><label><input id="styleL" type="radio" name="form"> 椭圆</label></li>
+            <li><label><input type="radio" name="form" checked> 矩形</label></li>
+        </ul>
+        <ul id="borderW">
+            <li>边框大小</li>
+            <li><label><input class="borderW" type="radio" name="weight" value="0"> 无</label></li>
+            <li><label><input class="borderW" type="radio" name="weight" checked value="2px"> 细</label></li>
+            <li><label><input class="borderW" type="radio" name="weight" value="6px"> 粗</label></li>
+            <li><label><input class="borderW" type="radio" name="weight" value="14px"> 加粗</label></li>
+        </ul>
+        <ul id="borderC">
+            <li>边框颜色</li>
+            <li><input id="borderColor" type="color" value="#000000"></li>
+        </ul>
+        <ul id="bgColor">
+            <li>背景颜色</li>
+            <li><input id="bgColor1" type="color" value="#000000"></li>
+            <li><label><input id="transparent" type="checkbox" checked> 无</label></li>
+        </ul>
+    </div>
+    <div id="Sketchpad"><?php echo $_SESSION['data']?></div>
+    <span style="display: block;position: relative ;left:-300px;top: 5px;font:14px/16px '微软雅黑'">*使用鼠标右键以绘制正方形或圆</span>
+    <span id="time" style="display: block;position: relative ;left:300px;top: -10px;font:14px/16px '微软雅黑'">上次保存时间:<?php echo $_SESSION['time'] ?></span>
+    <input id="delete" type="button" value="回退" >
+    <span class="key">(Backspace/Delete)</span>
+    <input id="clear" type="button" value="清空" >
+    <span class="key">(ctrlKey+Delete)</span>
+    <input id="back" type="button" value="重做" disabled >
+    <span class="key">(B)</span>
+    <input  type="button" value='保存' id="save"  disabled>
+    <span class="key " id="saveKey">(ctrlKey+S)</span>
+    <div class="out">
+        <p id="deleteUser">删除当前用户</p>
+        <p id="outUser">退出当前用户</p>
+        
+    </div>
+    <script src="./View/js/jquery-2.1.4/jquery.min.js"></script>
+    <script src="./View/js/tools.js"></script>
+    <script src="./View/js/pad.js"></script>
+    <script>
+        $('body *').animate({
+             opacity:1
+        }, 200);
+        var saveKey=document.getElementById('saveKey');   
+    </script>
+    
+</body>
+</html>

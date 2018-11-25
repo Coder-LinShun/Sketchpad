@@ -1,0 +1,140 @@
+
+body{
+    overflow: hidden;
+    background: url("../img/bg.jpg") no-repeat 
+}
+
+form{
+    width:500px;
+    position:relative;
+    top:-450px;
+    margin:140px auto; 
+    padding: 40px 0 30px;
+    background: rgba(255,255,255,0.2);
+    text-align: center;
+    border-radius:10px;
+    box-shadow: 1px 2px 5px 0 black; 
+    cursor: url("http://localhost/day05/demo/img/a2.ico"),pointer;
+    
+}
+#a{
+    width:80px;
+    height:380px;
+    position: absolute;
+    overflow: hidden;
+    left:210px;
+    bottom:246px;
+    background: rgb(209, 209, 209);
+    box-shadow: 0 0 6px 2px rgba(128, 128, 128, 0.842) inset, 1px 2px 3px 0 black ;
+    border-radius:4px;
+}
+#a div{
+    width:15px ;
+    height:8px;
+    border-top:1px solid rgba(128, 128, 128, 0.733);
+    border-right:1px solid rgba(128, 128, 128, 0.733);
+    float: left;
+}
+#b{
+    width:90px;
+    height:10px;
+    position: absolute;
+    left:205px;
+    top:20px;
+    background: rgba(32, 30, 30, 0.4);
+    border-radius:5px;
+}
+h3{
+    position: relative; 
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline
+}
+form h3:nth-of-type(1){
+    display: inline-block;
+}
+form h3:nth-of-type(2){
+    display: none
+}
+h3 span{
+    position:absolute;
+    display: inline-block;
+    height: 10px;
+    width:85px;
+    font:8px/10px '微软雅黑';
+    top:0;
+    right:-85px;
+    cursor: url("http://localhost/day05/demo/img/a2.ico"),pointer;
+}
+#title{
+    width:100%;
+    height:16px;
+    margin-bottom: -10px;
+   
+}
+#title p{
+    display:none;
+    height:16px ; 
+    font:14px/16px '微软雅黑';
+    color:rgb(80, 48, 48)  
+}
+
+form input{
+    display: block;
+    height: 30px;
+    width: 240px;
+    margin: 0 auto;
+    margin-top:20px;
+    padding: 0 10px;
+    border-radius: 5px;
+    font:15px/30px "微软雅黑";
+    background: rgba(255,255,255,0.4);
+    box-shadow: 0 0 3px 0 gray inset;
+    border:none;
+    text-align: center
+}
+input:hover{
+    box-shadow: 0 0  5px 1px black inset; 
+}
+.focus{
+    box-shadow: 0 0  5px 1px black inset; 
+}
+input[type=submit]{
+    width:260px;
+    background: lightblue;
+    box-shadow: 0 0  5px 0 gray inset; 
+   
+}
+form>span{
+    display: inline-block;
+    width: 70px;
+    font-weight: bold 
+}
+#titel_2,#titel_3{
+    height: 30px;
+    margin-top: 30px;
+    font: 16px/20px "微软雅黑"
+}
+#titel_3{
+    width: 70px;
+    margin: 30px auto 0;
+    position: relative;
+    display: none;
+    background: url('../img/pic.png') no-repeat center center;
+    background-size: 70px 30px; 
+    font-weight: bold;
+    
+}
+#visitor{
+    position:fixed;
+    right: 30px;
+    top:20px;
+    padding:0 3px 2px;
+    border: 1px solid black;
+    font:18px/20px '微软雅黑';
+    cursor:pointer;
+}
+#visitor:hover{
+    background: lightskyblue;
+}
